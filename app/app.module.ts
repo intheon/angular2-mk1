@@ -1,40 +1,37 @@
-// angular stuff
-import { NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
-import { FormsModule } from "@angular/forms";
+import { NgModule }       from '@angular/core';
+import { BrowserModule }  from '@angular/platform-browser';
+import { FormsModule }    from '@angular/forms';
 
-// routes
-import { routing } from "./app.routing";
-
-// my own component code
-import { DashboardComponent } from "./dashboard.component";
-import { HeroesComponent } from "./heroes.component";
-import { HeroDetailComponent } from "./hero-detail.component";
-import { AppComponent } from "./app.component";
-
-// services
-import { HeroService } from "./hero.service";
-
+import { AppComponent }         from './app.component';
+import { DashboardComponent }   from './dashboard.component';
+import { HeroDetailComponent }  from './hero-detail.component';
+import { HeroesComponent }      from './heroes.component';
+import { HeroService }          from './hero.service';
+import { routing } from './app.routing';
 
 @NgModule({
-	imports: [ 
-		BrowserModule,
-		FormsModule,
-		routing
-	],
-	declarations: [ 
-		AppComponent,
-		HeroesComponent,
-		DashboardComponent,
-		HeroDetailComponent
-	],
-	bootstrap: [ 
-		AppComponent
-	],
-	providers: [
-		HeroService
-	]
-
+  imports: [
+    BrowserModule,
+    FormsModule,
+    routing
+  ],
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    HeroDetailComponent,
+    HeroesComponent
+  ],
+  providers: [
+    HeroService
+  ],
+  bootstrap: [ AppComponent ]
 })
+export class AppModule {
+}
 
-export class AppModule {  }
+
+/*
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/
